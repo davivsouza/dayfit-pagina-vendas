@@ -1,24 +1,20 @@
-import { ImageIcon } from "lucide-react";
+import Image, { type StaticImageData } from "next/image";
 
-const cases = [
-  { name: "Fabiana R.", caption: "3 meses de PNM" },
-  { name: "Juliana M.", caption: "4 meses de PNM" },
-  { name: "Patrícia S.", caption: "2 meses de PNM" },
-  { name: "Renata C.", caption: "6 meses de PNM" },
-  { name: "Adriana L.", caption: "3 meses de PNM" },
-  { name: "Cristiane F.", caption: "5 meses de PNM" },
+import barriga30Dias from "@/assets/antes_depois/transformacao-barriga-30-dias.png";
+import doze from "@/assets/antes_depois/transformacao-12kg.png";
+import dezessete from "@/assets/antes_depois/transformacao-17kg.png";
+import cinquentaEOito from "@/assets/antes_depois/transformacao-58-anos.png";
+import gluteo from "@/assets/antes_depois/transformacao-gluteo-12-semanas.png";
+import medidas from "@/assets/antes_depois/transformacao-medidas.png";
+
+const cases: { src: StaticImageData; alt: string }[] = [
+  { src: doze, alt: "Antes e depois: menos 12 kg em cerca de 3 meses" },
+  { src: medidas, alt: "Antes e depois: menos medidas treinando em casa" },
+  { src: barriga30Dias, alt: "Antes e depois: menos barriga em 30 dias" },
+  { src: dezessete, alt: "Antes e depois: menos 17 kg em 2 meses" },
+  { src: cinquentaEOito, alt: "Antes e depois: cintura mais fina aos 58 anos" },
+  { src: gluteo, alt: "Antes e depois: glúteo em 12 semanas" },
 ];
-
-function PlaceholderHalf({ label }: { label: string }) {
-  return (
-    <div className="flex aspect-[3/4] flex-1 flex-col items-center justify-center gap-2 bg-gradient-to-b from-gray-100 to-gray-200">
-      <ImageIcon className="size-6 text-gray-400" />
-      <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">
-        {label}
-      </span>
-    </div>
-  );
-}
 
 export function BeforeAfter() {
   return (
@@ -32,20 +28,19 @@ export function BeforeAfter() {
           conhecer agora.
         </p>
 
-        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
+        <div className="mt-10 columns-2 gap-4 md:columns-3 md:gap-6">
           {cases.map((item) => (
             <figure
-              key={item.name}
-              className="overflow-hidden rounded-xl border border-gray-100 bg-white shadow-md"
+              key={item.src.src}
+              className="mb-4 break-inside-avoid overflow-hidden rounded-xl border border-gray-100 bg-white shadow-md md:mb-6"
             >
-              <div className="flex gap-px bg-gray-300">
-                <PlaceholderHalf label="Antes" />
-                <PlaceholderHalf label="Depois" />
-              </div>
-              <figcaption className="px-3 py-3">
-                <p className="text-sm font-bold text-gray-900">{item.name}</p>
-                <p className="text-xs text-gray-500">{item.caption}</p>
-              </figcaption>
+              <Image
+                src={item.src}
+                alt={item.alt}
+                sizes="(min-width: 768px) 320px, 45vw"
+                placeholder="blur"
+                className="h-auto w-full"
+              />
             </figure>
           ))}
         </div>
