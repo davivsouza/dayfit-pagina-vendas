@@ -1,4 +1,7 @@
-import { Award, Camera, Heart, Medal, Megaphone } from "lucide-react";
+import { Award, Heart, Medal, Megaphone } from "lucide-react";
+import Image from "next/image";
+
+import dayMormano from "@/assets/foto_day/day-mormano.jpg";
 
 const credentials = [
   { icon: Medal, value: "20+", label: "anos de experiência" },
@@ -16,12 +19,13 @@ export function Authority() {
         </h2>
 
         <div className="mt-10 flex flex-col items-center gap-8 md:flex-row md:items-start md:gap-12">
-          <div className="flex aspect-[3/4] w-full max-w-[280px] shrink-0 flex-col items-center justify-center gap-3 rounded-xl bg-gradient-to-b from-gray-200 to-gray-300 shadow-md">
-            <Camera className="size-8 text-gray-400" />
-            <span className="text-xs font-bold uppercase tracking-widest text-gray-400">
-              Foto da Day
-            </span>
-          </div>
+          <Image
+            src={dayMormano}
+            alt="Day Mormano"
+            sizes="280px"
+            placeholder="blur"
+            className="w-full max-w-70 shrink-0 rounded-xl shadow-md"
+          />
 
           <div className="space-y-4 text-base leading-relaxed text-gray-700 sm:text-lg">
             <p>
