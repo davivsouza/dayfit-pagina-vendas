@@ -10,10 +10,10 @@ import medidas from "@/assets/antes_depois/transformacao-medidas.png";
 const cases: { src: StaticImageData; alt: string }[] = [
   { src: doze, alt: "Antes e depois: menos 12 kg em cerca de 3 meses" },
   { src: medidas, alt: "Antes e depois: menos medidas treinando em casa" },
-  { src: barriga30Dias, alt: "Antes e depois: menos barriga em 30 dias" },
+  { src: gluteo, alt: "Antes e depois: glúteo em 12 semanas" },
   { src: dezessete, alt: "Antes e depois: menos 17 kg em 2 meses" },
   { src: cinquentaEOito, alt: "Antes e depois: cintura mais fina aos 58 anos" },
-  { src: gluteo, alt: "Antes e depois: glúteo em 12 semanas" },
+  { src: barriga30Dias, alt: "Antes e depois: menos barriga em 30 dias" },
 ];
 
 export function BeforeAfter() {
