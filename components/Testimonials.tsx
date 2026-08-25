@@ -29,9 +29,9 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="bg-gray-50 px-4 py-16 sm:py-20">
+    <section className="bg-dark-soft px-4 py-16 sm:py-20">
       <div className="mx-auto max-w-5xl">
-        <h2 className="text-center font-display text-xl font-extrabold text-gray-900 sm:text-2xl">
+        <h2 className="text-center font-display text-xl font-extrabold text-white sm:text-2xl">
           O que elas estão dizendo
         </h2>
 
@@ -39,14 +39,14 @@ export function Testimonials() {
           {testimonials.map((item) => (
             <figure
               key={item.author}
-              className="flex flex-col gap-4 rounded-xl border border-gray-100 bg-white p-6 shadow-md"
+              className="flex flex-col gap-4 rounded-xl border border-white/10 bg-white/5 p-6 shadow-lg"
             >
               <Quote className="size-7 fill-accent/15 text-accent" />
-              <blockquote className="flex-1 text-sm leading-relaxed text-gray-700">
+              <blockquote className="flex-1 text-sm leading-relaxed text-gray-300">
                 &ldquo;{item.text}&rdquo;
               </blockquote>
               <figcaption>
-                <p className="text-sm font-bold text-gray-900">
+                <p className="text-sm font-bold text-white">
                   — {item.author}
                 </p>
                 <div className="mt-1.5 flex gap-0.5">
@@ -62,7 +62,7 @@ export function Testimonials() {
           ))}
         </div>
 
-        <p className="mt-8 text-center text-xs text-gray-400">
+        <p className="mt-8 text-center text-xs text-gray-500">
           Os depoimentos nesta página são experiências pessoais de cada mulher e
           não é garantido que você irá obter resultados iguais.
         </p>

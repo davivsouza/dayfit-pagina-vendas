@@ -36,7 +36,7 @@ const features: { title: string; text: string; src: StaticImageData }[] = [
 
 function PhoneMockup({ src, alt }: { src: StaticImageData; alt: string }) {
   return (
-    <div className="mx-auto w-full max-w-[220px] rounded-[2rem] border-8 border-gray-900 bg-gray-900 shadow-xl">
+    <div className="mx-auto w-full max-w-[220px] rounded-[2rem] border-8 border-gray-800 bg-gray-800 shadow-2xl ring-1 ring-white/15">
       <div className="overflow-hidden rounded-[1.5rem] bg-black">
         <Image
           src={src}
@@ -52,12 +52,12 @@ function PhoneMockup({ src, alt }: { src: StaticImageData; alt: string }) {
 
 export function AppTour() {
   return (
-    <section className="bg-white px-4 py-16 sm:py-20">
+    <section className="bg-dark px-4 py-16 sm:py-20">
       <div className="mx-auto max-w-5xl">
-        <h2 className="text-center font-display text-xl font-extrabold text-gray-900 sm:text-2xl">
+        <h2 className="text-center font-display text-xl font-extrabold text-white sm:text-2xl">
           Tudo isso, na palma da sua mão
         </h2>
-        <p className="mt-3 text-center text-sm text-gray-600 sm:text-base">
+        <p className="mt-3 text-center text-sm text-gray-300 sm:text-base">
           O aplicativo exclusivo do PNM, o seu parceiro de todo dia nessa
           jornada.
         </p>
@@ -80,10 +80,10 @@ export function AppTour() {
                 <p className="text-xs font-bold uppercase tracking-widest text-accent">
                   {String(index + 1).padStart(2, "0")}
                 </p>
-                <h3 className="mt-1 font-display text-lg font-extrabold text-gray-900 sm:text-xl">
+                <h3 className="mt-1 font-display text-lg font-extrabold text-white sm:text-xl">
                   {feature.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                <p className="mt-3 text-sm leading-relaxed text-gray-300">
                   {feature.text}
                 </p>
               </div>
