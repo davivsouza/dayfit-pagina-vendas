@@ -41,10 +41,10 @@ export function AppTour() {
   return (
     <section className="bg-white px-4 py-16 sm:py-20">
       <div className="mx-auto max-w-5xl">
-        <h2 className="text-center font-display text-2xl font-extrabold text-gray-900 sm:text-3xl">
+        <h2 className="text-center font-display text-xl font-extrabold text-gray-900 sm:text-2xl">
           Tudo isso, na palma da sua mão
         </h2>
-        <p className="mt-3 text-center text-base text-gray-600 sm:text-lg">
+        <p className="mt-3 text-center text-sm text-gray-600 sm:text-base">
           O aplicativo exclusivo do PNM, o seu parceiro de todo dia nessa
           jornada.
         </p>
@@ -64,10 +64,10 @@ export function AppTour() {
                 <p className="text-xs font-bold uppercase tracking-widest text-accent">
                   {String(index + 1).padStart(2, "0")}
                 </p>
-                <h3 className="mt-1 font-display text-xl font-extrabold text-gray-900 sm:text-2xl">
+                <h3 className="mt-1 font-display text-lg font-extrabold text-gray-900 sm:text-xl">
                   {feature.title}
                 </h3>
-                <p className="mt-3 text-base leading-relaxed text-gray-600">
+                <p className="mt-3 text-sm leading-relaxed text-gray-600">
                   {feature.text}
                 </p>
               </div>
