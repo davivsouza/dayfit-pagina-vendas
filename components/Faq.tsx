@@ -45,7 +45,7 @@ export function Faq() {
   return (
     <section className="bg-white px-4 py-16 sm:py-20">
       <div className="mx-auto max-w-3xl">
-        <h2 className="text-center font-display text-2xl font-extrabold text-gray-900 sm:text-3xl">
+        <h2 className="text-center font-display text-xl font-extrabold text-gray-900 sm:text-2xl">
           Perguntas frequentes
         </h2>
 
@@ -60,7 +60,7 @@ export function Faq() {
                   aria-expanded={isOpen}
                   className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
                 >
-                  <span className="text-sm font-semibold text-gray-900 sm:text-base">
+                  <span className="text-sm font-semibold text-gray-900">
                     {faq.question}
                   </span>
                   <ChevronDown

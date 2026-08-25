@@ -41,10 +41,10 @@ export function Offer() {
   return (
     <section id="oferta" className="scroll-mt-24 bg-gray-50 px-4 py-16 sm:py-20">
       <div className="mx-auto max-w-5xl">
-        <h2 className="text-center font-display text-2xl font-extrabold text-gray-900 sm:text-3xl">
+        <h2 className="text-center font-display text-xl font-extrabold text-gray-900 sm:text-2xl">
           Assine e tenha acesso a todos os conteúdos da plataforma
         </h2>
-        <p className="mt-3 text-center text-base text-gray-600 sm:text-lg">
+        <p className="mt-3 text-center text-sm text-gray-600 sm:text-base">
           Sem surpresas, sem cobranças extras.
         </p>
 
@@ -67,14 +67,14 @@ export function Offer() {
                 {plan.highlighted && (
                   <Crown className="size-5 fill-amber-400 text-amber-500" />
                 )}
-                <h3 className="font-display text-lg font-extrabold uppercase text-gray-900">
+                <h3 className="font-display text-base font-extrabold uppercase text-gray-900">
                   {plan.name}
                 </h3>
               </div>
               <div className="mt-5 text-center">
-                <p className="font-display text-4xl font-black text-gray-900">
+                <p className="font-display text-3xl font-black text-gray-900">
                   {plan.price}
-                  <span className="text-base font-semibold text-gray-500">
+                  <span className="text-sm font-semibold text-gray-500">
                     /mês
                   </span>
                 </p>
@@ -87,7 +87,7 @@ export function Offer() {
               </p>
               <a
                 href={plan.checkoutUrl}
-                className={`mt-6 rounded-xl px-6 py-4 text-center font-display text-base font-extrabold uppercase tracking-wide text-white transition-colors ${
+                className={`mt-6 rounded-xl px-6 py-4 text-center font-display text-sm font-extrabold uppercase tracking-wide text-white transition-colors ${
                   plan.highlighted
                     ? "bg-cta shadow-[0_8px_30px_rgba(22,163,74,0.35)] hover:bg-cta-dark"
                     : "bg-gray-900 hover:bg-gray-700"
@@ -104,7 +104,7 @@ export function Offer() {
         </p>
 
         <div className="mx-auto mt-12 max-w-2xl rounded-2xl border border-amber-200 bg-amber-50 p-7 sm:p-8">
-          <h3 className="flex items-center justify-center gap-2 font-display text-lg font-extrabold uppercase text-gray-900">
+          <h3 className="flex items-center justify-center gap-2 font-display text-base font-extrabold uppercase text-gray-900">
             <Gift className="size-5 text-brand" />
             Bônus exclusivos
           </h3>

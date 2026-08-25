@@ -11,11 +11,11 @@ export function Guarantee() {
           </span>
         </span>
 
-        <h2 className="mt-6 font-display text-2xl font-extrabold text-gray-900 sm:text-3xl">
+        <h2 className="mt-6 font-display text-xl font-extrabold text-gray-900 sm:text-2xl">
           Risco zero pra você experimentar
         </h2>
 
-        <div className="mt-5 space-y-4 text-base leading-relaxed text-gray-700 sm:text-lg">
+        <div className="mt-5 space-y-4 text-sm leading-relaxed text-gray-700 sm:text-base">
           <p>
             Você tem 7 dias de garantia em qualquer compra online, é seu direito
             por lei. Entra no PNM, testa o treino, a alimentação, o app, o

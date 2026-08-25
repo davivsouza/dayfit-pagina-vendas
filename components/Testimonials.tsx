@@ -31,7 +31,7 @@ export function Testimonials() {
   return (
     <section className="bg-gray-50 px-4 py-16 sm:py-20">
       <div className="mx-auto max-w-5xl">
-        <h2 className="text-center font-display text-2xl font-extrabold text-gray-900 sm:text-3xl">
+        <h2 className="text-center font-display text-xl font-extrabold text-gray-900 sm:text-2xl">
           O que elas estão dizendo
         </h2>
 

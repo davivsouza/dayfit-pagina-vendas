@@ -31,11 +31,11 @@ export function Methodology() {
   return (
     <section className="bg-white px-4 py-16 sm:py-20">
       <div className="mx-auto max-w-5xl">
-        <h2 className="text-center font-display text-2xl font-extrabold text-gray-900 sm:text-3xl">
+        <h2 className="text-center font-display text-xl font-extrabold text-gray-900 sm:text-2xl">
           O método por trás do resultado: conheça o PNM
         </h2>
 
-        <div className="mx-auto mt-6 max-w-3xl space-y-4 text-center text-base leading-relaxed text-gray-600 sm:text-lg">
+        <div className="mx-auto mt-6 max-w-3xl space-y-4 text-center text-sm leading-relaxed text-gray-600 sm:text-base">
           <p>
             PNM significa Projeto Nova Mulher. E &ldquo;nova&rdquo; aqui não é
             sobre virar outra pessoa, é sobre voltar a ser a mulher que você já
@@ -61,7 +61,7 @@ export function Methodology() {
               <p className="mt-4 text-xs font-bold uppercase tracking-widest text-accent">
                 {pillar.number}
               </p>
-              <h3 className="mt-1 font-display text-lg font-extrabold uppercase text-gray-900">
+              <h3 className="mt-1 font-display text-base font-extrabold uppercase text-gray-900">
                 {pillar.title}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-gray-600">
@@ -71,7 +71,7 @@ export function Methodology() {
           ))}
         </div>
 
-        <p className="mx-auto mt-10 max-w-3xl text-center text-base font-medium text-gray-800 sm:text-lg">
+        <p className="mx-auto mt-10 max-w-3xl text-center text-sm font-medium text-gray-800 sm:text-base">
           Quatro pilares, um método, um nome:{" "}
           <strong className="text-brand">PNM</strong>. Não é sobre se esforçar
           mais, é sobre se esforçar certo, no método certo pra essa fase do seu

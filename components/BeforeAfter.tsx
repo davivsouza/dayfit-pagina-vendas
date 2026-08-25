@@ -20,10 +20,10 @@ export function BeforeAfter() {
   return (
     <section className="bg-white px-4 py-16 sm:py-20">
       <div className="mx-auto max-w-5xl text-center">
-        <h2 className="font-display text-2xl font-extrabold text-gray-900 sm:text-3xl">
+        <h2 className="font-display text-xl font-extrabold text-gray-900 sm:text-2xl">
           Transformações reais de quem já vive essa virada
         </h2>
-        <p className="mt-3 text-base text-gray-600 sm:text-lg">
+        <p className="mt-3 text-sm text-gray-600 sm:text-base">
           Resultado de mulheres que aplicaram o mesmo método que você vai
           conhecer agora.
         </p>
