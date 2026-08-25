@@ -1,37 +1,50 @@
-import { Smartphone } from "lucide-react";
+import Image, { type StaticImageData } from "next/image";
 
-const features = [
+import print1 from "@/assets/imagens_app/1.png";
+import print2 from "@/assets/imagens_app/2.png";
+import print3 from "@/assets/imagens_app/3.png";
+import print4 from "@/assets/imagens_app/4.png";
+import print5 from "@/assets/imagens_app/5.png";
+
+const features: { title: string; text: string; src: StaticImageData }[] = [
   {
     title: "Treino em casa, todos os dias",
     text: "Sem precisar de nenhum equipamento, direto no seu celular.",
+    src: print1,
   },
   {
     title: "Treino guiado de academia",
     text: "Vídeo explicando cada exercício, série por série, pra você nunca mais ficar perdida.",
+    src: print2,
   },
   {
     title: "Diário alimentar simples",
     text: "Registre o que você come, sem culpa, só pra enxergar seus padrões.",
+    src: print3,
   },
   {
     title: "Cardápio sugerido",
     text: "Pensado pro seu momento hormonal, pra você nunca ficar se perguntando o que preparar.",
+    src: print4,
   },
   {
     title: "Comunidade exclusiva",
     text: "Outras mulheres na mesma jornada, com a Day acompanhando de perto.",
+    src: print5,
   },
 ];
 
-function PhoneMockup({ label }: { label: string }) {
+function PhoneMockup({ src, alt }: { src: StaticImageData; alt: string }) {
   return (
     <div className="mx-auto w-full max-w-[220px] rounded-[2rem] border-8 border-gray-900 bg-gray-900 shadow-xl">
-      <div className="flex aspect-[9/19] flex-col items-center justify-center gap-3 rounded-[1.5rem] bg-gradient-to-b from-gray-100 to-gray-200 px-4 text-center">
-        <Smartphone className="size-7 text-gray-400" />
-        <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">
-          Print real do app
-        </span>
-        <span className="text-xs font-semibold text-gray-500">{label}</span>
+      <div className="overflow-hidden rounded-[1.5rem] bg-black">
+        <Image
+          src={src}
+          alt={alt}
+          sizes="220px"
+          placeholder="blur"
+          className="h-auto w-full"
+        />
       </div>
     </div>
   );
@@ -58,7 +71,10 @@ export function AppTour() {
               }`}
             >
               <div className="w-full md:w-1/2">
-                <PhoneMockup label={feature.title} />
+                <PhoneMockup
+                  src={feature.src}
+                  alt={`Tela do app PNM: ${feature.title}`}
+                />
               </div>
               <div className="w-full text-center md:w-1/2 md:text-left">
                 <p className="text-xs font-bold uppercase tracking-widest text-accent">
