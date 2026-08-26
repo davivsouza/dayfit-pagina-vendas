@@ -28,9 +28,14 @@ const faqs = [
       "Sim, conforme as regras de cada plano (renovação automática por período).",
   },
   {
+    question: "Como recebo meu acesso depois de pagar?",
+    answer:
+      "Assim que o pagamento é aprovado, você recebe no e-mail usado no checkout um link para criar sua senha e entrar na plataforma de aulas. Se não achar, procure por DAY FIT na caixa de spam e promoções.",
+  },
+  {
     question: "É seguro comprar pela internet?",
     answer:
-      "Sim, a compra é processada por plataforma de pagamento com sistema de segurança reconhecido no mercado. Compre sempre pelo site oficial.",
+      "Sim, o pagamento é processado pela Cakto, plataforma com sistema de segurança reconhecido no mercado, com cartão, Pix ou boleto. Compre sempre pelo site oficial.",
   },
   {
     question: "Vou ter suporte depois da compra?",
