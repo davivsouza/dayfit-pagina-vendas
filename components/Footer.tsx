@@ -1,3 +1,5 @@
+import { PLATFORM_LOGIN_URL } from "@/lib/platform";
+
 export function Footer() {
   const year = new Date().getFullYear();
 
@@ -33,6 +35,13 @@ export function Footer() {
           <span aria-hidden>|</span>
           <a href="#" className="hover:text-white">
             Contato/Suporte
+          </a>
+          <span aria-hidden>|</span>
+          <a
+            href={PLATFORM_LOGIN_URL}
+            className="font-semibold text-white hover:text-accent"
+          >
+            Já sou aluna
           </a>
         </nav>
 

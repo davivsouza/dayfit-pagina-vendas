@@ -1,35 +1,6 @@
 import { Check, Crown, Gift } from "lucide-react";
-import { CHECKOUT_URLS } from "@/lib/checkout";
-
-const plans = [
-  {
-    id: "anual",
-    name: "Anual",
-    price: "R$ 44,90",
-    total: "R$ 538,80 à vista",
-    renewal: "Renovação automática a cada 12 meses",
-    highlighted: true,
-    checkoutUrl: CHECKOUT_URLS.anual,
-  },
-  {
-    id: "semestral",
-    name: "Semestral",
-    price: "R$ 52,90",
-    total: "R$ 317,40 à vista",
-    renewal: "Renovação automática a cada 6 meses",
-    highlighted: false,
-    checkoutUrl: CHECKOUT_URLS.semestral,
-  },
-  {
-    id: "mensal",
-    name: "Mensal",
-    price: "R$ 64,90",
-    total: null,
-    renewal: "Renovação automática mensal",
-    highlighted: false,
-    checkoutUrl: CHECKOUT_URLS.mensal,
-  },
-];
+import { CheckoutButton } from "@/components/CheckoutButton";
+import { getOfferPlans } from "@/lib/plans";
 
 const bonuses = [
   { name: "Guia Anti-Efeito Sanfona", value: "R$147" },
@@ -37,7 +8,9 @@ const bonuses = [
   { name: "Consultoria de bônus com a equipe", value: "R$97" },
 ];
 
-export function Offer() {
+export async function Offer() {
+  const plans = await getOfferPlans();
+
   return (
     <section id="oferta" className="scroll-mt-24 bg-gray-50 px-4 py-16 sm:py-20">
       <div className="mx-auto max-w-5xl">
@@ -73,19 +46,19 @@ export function Offer() {
               </div>
               <div className="mt-5 text-center">
                 <p className="font-display text-3xl font-black text-gray-900">
-                  {plan.price}
+                  {plan.monthlyPrice}
                   <span className="text-sm font-semibold text-gray-500">
                     /mês
                   </span>
                 </p>
-                {plan.total && (
-                  <p className="mt-1 text-sm text-gray-500">{plan.total}</p>
+                {plan.fullPrice && (
+                  <p className="mt-1 text-sm text-gray-500">{plan.fullPrice}</p>
                 )}
               </div>
               <p className="mt-4 flex-1 text-center text-xs text-gray-500">
                 {plan.renewal}
               </p>
-              <a
+              <CheckoutButton
                 href={plan.checkoutUrl}
                 className={`mt-6 rounded-xl px-6 py-4 text-center font-display text-sm font-extrabold uppercase tracking-wide text-white transition-colors ${
                   plan.highlighted
@@ -94,13 +67,14 @@ export function Offer() {
                 }`}
               >
                 Quero esse
-              </a>
+              </CheckoutButton>
             </div>
           ))}
         </div>
 
         <p className="mt-8 text-center text-xs text-gray-400">
-          Todos os planos com incidência de juros conforme parcelamento.
+          Pagamento processado pela Cakto — cartão, Pix ou boleto. Todos os
+          planos com incidência de juros conforme parcelamento.
         </p>
 
         <div className="mx-auto mt-12 max-w-2xl rounded-2xl border border-amber-200 bg-amber-50 p-7 sm:p-8">
